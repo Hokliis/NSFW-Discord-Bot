@@ -1,4 +1,4 @@
-import near.utils.installerm as ins
+import nsfwbot.utils.installerm as ins
 
 ins.clear()
 ins.INSTALL_ALL()

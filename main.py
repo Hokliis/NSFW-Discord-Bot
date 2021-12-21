@@ -3,15 +3,18 @@ import os
 import discord
 from discord.ext import commands
 
-from near.database import get_main
-from near.web.keep_alive import keep_alive
+from nsfwbot.database import get_main
+from nsfwbot.web.keep_alive import keep_alive
 
 bot_prefix = get_main.BotMainDB.MESSAGE_PREFIX
 bot_creator_name = get_main.BotMainDB.BOT_CREATOR_NAME
 bot_current_version = get_main.BotMainDB.BOT_VERSION
 bot_owner_id_or_dev_id = get_main.BotMainDB.DEV_ID
 
-token = get_main.BotMainDB.BOT_TOKEN
+with open("token", "r", encoding="utf-8") as tokenfile:
+    token = tokenfile.read()
+
+
 client = commands.Bot(command_prefix=bot_prefix)
 
 
@@ -24,7 +27,7 @@ async def loadex(ctx, extension):
         embed.set_author(
             name=f"{client.user.name}", icon_url=f"{client.user.avatar_url}")
         embed.set_thumbnail(
-            url="https://cdn.discordapp.com/attachments/877796755234783273/879298565380386846/sign-red-error-icon-1.png")
+            url="https://cdn.discordapp.com/attachments/877796755234783273/923073371695099914/4rghdDI6DXyVN7U-mRBWYzN--y97aYNv_RP3PpKnHa1Om-xzj9A3a58Of5kKdKKbfjzdm2kI73o1QHfruCkkAkzmu10t4Wc.png")
         await ctx.send(embed=embed)
         return
     else:
@@ -41,25 +44,25 @@ async def loadex(ctx, extension):
 @client.command()
 async def unloadex(ctx, extension):
     if ctx.author.id == bot_owner_id_or_dev_id:
-        try:
-            client.unload_extension(f'cogs.{extension}')
-            embed = discord.Embed(
-                title="SUCCESS", description=f"`REMOVED cogs.{extension} from NearBot`", color=0xff0000)
-            embed.set_author(
-                name=f"{client.user.name}", icon_url=f"{client.user.avatar_url}")
-            embed.set_thumbnail(
-                url="https://cdn.discordapp.com/attachments/877796755234783273/879298565380386846/sign-red-error-icon-1.png")
-            await ctx.send(embed=embed)
-            return
-        except:
-            embed = discord.Embed(
-                title="ERROR", description="`You don't have the permissions required to use this command!`", color=0xff0000)
-            embed.set_author(
-                name=f"{client.user.name}", icon_url=f"{client.user.avatar_url}")
-            embed.set_thumbnail(
-                url="https://cdn.discordapp.com/attachments/877796755234783273/879298565380386846/sign-red-error-icon-1.png")
-            await ctx.send(embed=embed)
-            return
+        client.unload_extension(f'cogs.{extension}')
+        embed = discord.Embed(
+            title="SUCCESS", description=f"`REMOVED cogs.{extension} from NearBot`", color=0xff0000)
+        embed.set_author(
+            name=f"{client.user.name}", icon_url=f"{client.user.avatar_url}")
+        embed.set_thumbnail(
+            url="https://cdn.discordapp.com/attachments/877796755234783273/923073371695099914/4rghdDI6DXyVN7U-mRBWYzN--y97aYNv_RP3PpKnHa1Om-xzj9A3a58Of5kKdKKbfjzdm2kI73o1QHfruCkkAkzmu10t4Wc.png")
+        await ctx.send(embed=embed)
+        return
+    else:
+
+        embed = discord.Embed(
+            title="ERROR", description="`You don't have the permissions required to use this command!`", color=0xff0000)
+        embed.set_author(
+            name=f"{client.user.name}", icon_url=f"{client.user.avatar_url}")
+        embed.set_thumbnail(
+            url="https://cdn.discordapp.com/attachments/877796755234783273/879298565380386846/sign-red-error-icon-1.png")
+        await ctx.send(embed=embed)
+        return
 
 
 # This is for user input sanitization

@@ -2,7 +2,7 @@ import json
 
 
 class BotMainDB:
-    with open("near/database/main.json", "r", encoding="utf-8") as file:
+    with open("nsfwbot/database/main.json", "r", encoding="utf-8") as file:
         embed = json.load(file)
 
     MESSAGE_PREFIX = embed["MESSAGE_PREFIX"]
