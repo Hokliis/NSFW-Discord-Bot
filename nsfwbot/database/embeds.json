@@ -19,5 +19,9 @@
 
     "COMMON":{
         "COLOR":"red"
+    },
+    "HELP":{
+        "THUMBNAIL": "",
+        "COLOR": "red"
     }
 }

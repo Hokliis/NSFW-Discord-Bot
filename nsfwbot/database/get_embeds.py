@@ -48,3 +48,17 @@ class Common:
         COLOR = 0x00ff00
     elif embed["COMMON"]["COLOR"] == "blue":
         COLOR = 0x0000ff
+
+
+class Help:
+    with open("nsfwbot/database/embeds.json", "r", encoding="utf-8") as file:
+        embed = json.load(file)
+
+    if embed["HELP"]["COLOR"] == "red":
+        COLOR = 0xff0000
+    elif embed["HELP"]["COLOR"] == "green":
+        COLOR = 0x00ff00
+    elif embed["HELP"]["COLOR"] == "blue":
+        COLOR = 0x0000ff
+
+    THUMBNAIL = embed["HELP"]["COLOR"]
