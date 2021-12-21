@@ -171,27 +171,14 @@ class General(commands.Cog):
 
         try:
             embed3 = discord.Embed(
-                title=":gear: Help", description="The list of all the commands! the might be some eastereggs!?! ", color=get_embeds.Common.COLOR)
+                title=":gear: Help", color=get_embeds.Help.COLOR)
             embed3.set_author(
                 name=f"{self.client.user.name}", icon_url=f"{self.client.user.avatar_url}")
             embed3.set_thumbnail(
-                url="https://cdn.discordapp.com/attachments/881007500588089404/881046764206039070/unknown.png")
+                url=get_embeds.Help.THUMBNAIL)
             embed3.add_field(
-                name="Crypto:", value=f"`{bp}bitcoin` - Get the bitcoin rates \n`{bp}doge` - Get the doge coin rates \n`{bp}xmr` - Get the Monero rates \n`{bp}xrp` - Get the ripple rates \n`{bp}eth` - Get the etherium rates \n`{bp}rvn` - Get raven coin rates and additional information", inline=False)
-            embed3.add_field(
-                name="Encoding", value=f"`{bp}e_b64 [value]` - Encode to Base64 \n`{bp}e_leet [value]` - Encode to leet \n`{bp}e_md5` - Encode to MD5 \n`{bp}e_sha1` - Encode to SHA1 \n`{bp}e_sha224` - Encode to SHA224 \n`{bp}e_sha512` - Encode to SHA512", inline=False)
-            embed3.add_field(name="Fun", value=f"`{bp}inspire` - Send you an inspirational quote! \n`{bp}bored` - Get some activity to do \n`{bp}meme` - Get a meme to laught ats \n`{bp}dadjoke` - just a Dad Joke \n`{bp}joke` - Laughing is the best medicing \n`{bp}joke2` - Jokes are awesome! \n`{bp}wyr`- Would you rather? \n`{bp}advice` - Advice makes our lives better", inline=False)
-            embed3.add_field(
-                name="Fake Information", value=f"`{bp}fake help` - List out all the fake information commands! \n`{bp}face [gender:optional]` - Generate a fake face with a name", inline=False)
+                name="Crypto:", value=f"", inline=False)
 
-            # OLD MUSIC, COG
-            # embed3.add_field(name="Music (BETA)", value=f"`{bp}play [song-name]` - Join to Voice Channel and play the song\n`{bp}join` - Join Voice Channel \n`{bp}leave` - Leave Voice Channel \n`{bp}skip` - Skip the current playing song and go to the next \n`{bp}summon [vc-name]` - Make the bot join to a VC (Case Sensitive) \n`{bp}now` - Displays the current playing song \n`{bp}queue` - Send the music queue waiting to be played! \n`{bp}shuffle` - Shuffle the queue \n`{bp}remove [index-from-queue]` - Remove a song from the queue \n`{bp}loop` - Loop the same song, use again to unloop", inline=False)
-
-            # NEW MUSIC, LAVA LINK
-            embed3.add_field(
-                name="Music", value=f"`{bp}connect` - Connect to Voice Channel \n`{bp}disconnect` - Disconnect bot from Voice Channel \n`{bp}play [song-name/link]` - Play the song \n`{bp}skip` - Skip the currently playing song \n`{bp}pause` - Pause the music \n`{bp}resume` - Resume the music \n`{bp}seek [seconds]` - Skip the given seconds of the playing song \n`{bp}volume [number]` - Change the volume of the song \n`{bp}loop [type]` - Play music in a loop \n`{bp}nowplaying` - Show the song which is being played right now \n`{bp}queue` - Diplay the songs waiting to be played \n`{bp}equalizer` - Maybe tune the song to your liking?", inline=False)
-
-            embed3.add_field(name="Others", value=f"`{bp}countryinfo [country_code]` - Search for Country Information \n`{bp}hastebin [text]` - Create a hatebin link for the given text \n`{bp}insta [ig_username]` - Download the Instgram profile picture \n`{bp}ip [ip_addr]` - Find Information of an IP Address \n`{bp}lyrics [song_name]` - Find lyrics of any song \n`{bp}mfp [number]` - Mass fake profile \n`{bp}pwdcheck [password]` - Check for the status of a password \n`{bp}uptime` - Show bot uptime \n ", inline=False)
             embed3.set_footer(text=f"Requested by {ctx.author.name}")
             await loading_message.delete()
             await ctx.send(embed=embed3)
