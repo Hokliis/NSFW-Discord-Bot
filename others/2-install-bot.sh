@@ -1,7 +1,7 @@
-git clone https://github.com/hirusha-adi/Near
+git clone https://github.com/hirusha-adi/NSFW-Discord-Bot
 echo "Please enter the bot token; Ctrl+S and Ctrl+X"
 sleep 5s
-nano ./Near/near/database/main.json
+nano ./NSFW-Discord-Bot/nsfwbot/database/main.json
 clear
 echo "You can now start the bot, run the commands below"
 echo "cd Near"

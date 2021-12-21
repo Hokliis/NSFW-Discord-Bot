@@ -1,4 +1,3 @@
-rm -rf ./Near
-rm -rf ./LavalinkServer
+rm -rf ./NSFW-Discord-Bot
 clear
-echo "Removed ./Near and ./LavalinkServer"
+echo "Removed ./NSFW-Discord-Bot"
