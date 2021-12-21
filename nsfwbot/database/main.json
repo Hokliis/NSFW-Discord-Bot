@@ -1,5 +1,6 @@
 {
-    "MESSAGE_PREFIX":"--",
+    "MESSAGE_PREFIX":"-",
     "BOT_CREATOR_NAME":"ZeaCeR#5641",
-    "BOT_VERSION":"1.0"
+    "BOT_VERSION":"1.0",
+    "DEV_AND_OWNERS":[584662127470575616]
 }
