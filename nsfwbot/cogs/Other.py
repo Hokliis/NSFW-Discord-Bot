@@ -265,6 +265,47 @@ class Other(commands.Cog):
             embed3.set_footer(text=f"Requested by {ctx.author.name}")
             await loading_message.delete()
             await ctx.send(embed=embed3)
+    
+    @commands.command()
+    async def blowjob(self, ctx):
+        loading_message = await ctx.send(embed=self.please_wait_emb)
+        try:
+            async with aiohttp.ClientSession() as pornSession:
+                async with pornSession.get(f'https://nekos.life/api/v2/img/blowjob') as jsondata:
+                    if not 300 > jsondata.status >= 200:
+                        embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
+                                   description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
+                        embed3.set_author(name=f"{self.client.user.name}",
+                                        icon_url=f"{self.client.user.avatar_url}")
+                        embed3.set_thumbnail(url=get_embeds.ErrorEmbeds.THUMBNAIL)
+                        embed3.add_field(
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Bad status code from API", inline=False)
+                        embed3.set_footer(text=f"Requested by {ctx.author.name}")
+                        await loading_message.delete()
+                        await ctx.send(embed=embed3)
+                        return
+
+                    res = await jsondata.json()
+
+            em = discord.Embed(color=get_embeds.Common.COLOR)
+            em.set_author(name=f"{self.client.user.name}",
+                             icon_url=f"{self.client.user.avatar_url}")
+            em.set_image(url=res['url'])
+            em.set_footer(text=f"Requested by {ctx.author.name}")
+            await loading_message.delete()
+            await ctx.send(embed=em)
+
+        except Exception as e:
+            embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
+                                   description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
+            embed3.set_author(name=f"{self.client.user.name}",
+                              icon_url=f"{self.client.user.avatar_url}")
+            embed3.set_thumbnail(url=get_embeds.ErrorEmbeds.THUMBNAIL)
+            embed3.add_field(
+                name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"{e}", inline=False)
+            embed3.set_footer(text=f"Requested by {ctx.author.name}")
+            await loading_message.delete()
+            await ctx.send(embed=embed3)
 
 def setup(client: commands.Bot):
     client.add_cog(Other(client))
