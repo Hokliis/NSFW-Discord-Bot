@@ -144,7 +144,7 @@ class Other(commands.Cog):
             await ctx.send(embed=embed3)
     
     @commands.command()
-    async def feet(self, ctx):
+    async def hentai(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
             async with aiohttp.ClientSession() as pornSession:
