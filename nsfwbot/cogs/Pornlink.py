@@ -1,3 +1,5 @@
+from random import randint as randomint
+
 import discord
 import aiohttp
 from discord.ext import commands
@@ -17,11 +19,13 @@ class Other(commands.Cog):
 
 
     @commands.command()
-    async def lewd(self, ctx, *, query):
+    async def pornlink(self, ctx, *, query):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
+            index_to_give = randomint(1, 70)
+
             async with aiohttp.ClientSession() as pornSession:
-                async with pornSession.get(f"https://www.eporner.com/api/v2/video/search/?query={query}&per_page=60&thumbsize=big&order=top-weekly&format=json") as jsondata:
+                async with pornSession.get(f"https://www.eporner.com/api/v2/video/search/?query={query}&per_page=72&thumbsize=big&order=top-weekly&format=json") as jsondata:
                     if not 300 > jsondata.status >= 200:
                         embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
                                    description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
@@ -36,7 +40,7 @@ class Other(commands.Cog):
                         return
 
                     try:
-                        res = await jsondata.json()
+                        resultjson = await jsondata.json()
                     except:
                         embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
                                    description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
@@ -50,10 +54,26 @@ class Other(commands.Cog):
                         await ctx.send(embed=embed3)
                         return
 
-            em = discord.Embed(color=get_embeds.Common.COLOR)
+            em = discord.Embed(title="Pornographic Content",
+                               description="Here is a video for you!", color=get_embeds.Common.COLOR)
             em.set_author(name=f"{self.client.user.name}",
                              icon_url=f"{self.client.user.avatar_url}")
-            em.set_image(url=res['url'])
+            em.set_image(url=resultjson["videos"]
+                         [index_to_give]["default_thumb"]["src"])
+            em.add_field(
+                name="Title", value=f'{resultjson["videos"][index_to_give]["title"]}', inline=False)
+            em.add_field(
+                name="Keywords", value=f'{resultjson["videos"][index_to_give]["keywords"]}', inline=False)
+            em.add_field(
+                name="Views", value=f'{resultjson["videos"][index_to_give]["views"]}', inline=False)
+            em.add_field(
+                name="Rating", value=f'{resultjson["videos"][index_to_give]["rate"]}', inline=False)
+            em.add_field(
+                name="Uploaded on", value=f'{resultjson["videos"][index_to_give]["added"]}', inline=False)
+            em.add_field(
+                name="Length", value=f'{resultjson["videos"][index_to_give]["length_min"]}', inline=False)
+            em.add_field(
+                name="URL", value=f'{resultjson["videos"][index_to_give]["url"]}', inline=False)
             em.set_footer(text=f"Requested by {ctx.author.name}")
             await loading_message.delete()
             await ctx.send(embed=em)
