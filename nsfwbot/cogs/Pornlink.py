@@ -6,7 +6,7 @@ from discord.ext import commands
 from nsfwbot.database import get_embeds, get_main
 
 
-class Other(commands.Cog):
+class Pornlink(commands.Cog):
     def __init__(self, client: commands.Bot):
         self.client = client
         # This is the please-wait/Loading embed
@@ -16,7 +16,6 @@ class Other(commands.Cog):
             name=get_embeds.PleaseWait.AUTHOR_NAME, icon_url=get_embeds.PleaseWait.AUTHOR_URL)
         self.please_wait_emb.set_thumbnail(url=get_embeds.PleaseWait.THUMBNAIL)
         self.please_wait_emb.set_footer(text=get_embeds.PleaseWait.FOOTER)
-
 
     @commands.command()
     async def pornlink(self, ctx, *, query):
@@ -28,13 +27,15 @@ class Other(commands.Cog):
                 async with pornSession.get(f"https://www.eporner.com/api/v2/video/search/?query={query}&per_page=72&thumbsize=big&order=top-weekly&format=json") as jsondata:
                     if not 300 > jsondata.status >= 200:
                         embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
-                                   description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
+                                               description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
                         embed3.set_author(name=f"{self.client.user.name}",
-                                        icon_url=f"{self.client.user.avatar_url}")
-                        embed3.set_thumbnail(url=get_embeds.ErrorEmbeds.THUMBNAIL)
+                                          icon_url=f"{self.client.user.avatar_url}")
+                        embed3.set_thumbnail(
+                            url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
                             name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Bad status code from API", inline=False)
-                        embed3.set_footer(text=f"Requested by {ctx.author.name}")
+                        embed3.set_footer(
+                            text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
                         await ctx.send(embed=embed3)
                         return
@@ -43,21 +44,23 @@ class Other(commands.Cog):
                         resultjson = await jsondata.json()
                     except:
                         embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
-                                   description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
+                                               description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
                         embed3.set_author(name=f"{self.client.user.name}",
-                                        icon_url=f"{self.client.user.avatar_url}")
-                        embed3.set_thumbnail(url=get_embeds.ErrorEmbeds.THUMBNAIL)
+                                          icon_url=f"{self.client.user.avatar_url}")
+                        embed3.set_thumbnail(
+                            url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
                             name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Unable to convert API result to json", inline=False)
-                        embed3.set_footer(text=f"Requested by {ctx.author.name}")
+                        embed3.set_footer(
+                            text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
                         await ctx.send(embed=embed3)
                         return
 
-            em = discord.Embed(title="Pornographic Content",
+            em = discord.Embed(title="Pornographic Content", url=f'{resultjson["videos"][index_to_give]["url"]}',
                                description="Here is a video for you!", color=get_embeds.Common.COLOR)
             em.set_author(name=f"{self.client.user.name}",
-                             icon_url=f"{self.client.user.avatar_url}")
+                          icon_url=f"{self.client.user.avatar_url}")
             em.set_image(url=resultjson["videos"]
                          [index_to_give]["default_thumb"]["src"])
             em.add_field(
@@ -89,7 +92,7 @@ class Other(commands.Cog):
             embed3.set_footer(text=f"Requested by {ctx.author.name}")
             await loading_message.delete()
             await ctx.send(embed=embed3)
-    
+
 
 def setup(client: commands.Bot):
-    client.add_cog(Other(client))
+    client.add_cog(Pornlink(client))
