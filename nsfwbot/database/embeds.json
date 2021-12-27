@@ -61,6 +61,22 @@
                 "name":"The bot was online for: ",
                 "value": ":alarm_clock: {}"
             }
+        },
+
+        "clean": {
+            "If-Correct-Value": {
+                "title":"Success!",
+                "Field1": {
+                    "name":"Action",
+                    "value": "Deleted {} {} sent by {}!"
+                }
+            },
+            "Else": {
+                "Field1": {
+                    "name": "Error:",
+                    "value": "Please enter a value below {}!"
+                }
+            }
         }
 
     

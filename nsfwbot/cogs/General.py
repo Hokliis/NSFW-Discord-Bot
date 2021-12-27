@@ -125,21 +125,22 @@ class General(commands.Cog):
         You need have the "manage_messages" permission to use this command
         """
         try:
-            if amount <= 100:
+            checkval = 100
+            if amount <= checkval:
                 amttdel = amount + 1
                 await ctx.channel.purge(limit=amttdel, check=lambda m: m.author == self.client.user)
 
-                if amount == "1":
+                if str(amount) == "1":
                     msgtxt = "message"
                 else:
                     msgtxt = "messages"
 
                 embed = discord.Embed(
-                    title="Success!", color=get_embeds.Common.COLOR)
+                    title=other_embeds["clean"]["If-Correct-Value"]["title"], color=get_embeds.Common.COLOR)
                 embed.set_author(name=f"{self.client.user.name}",
                                  icon_url=f"{self.client.user.avatar_url}")
                 embed.add_field(
-                    name="Action", value=f"Deleted {amount} {msgtxt} sent by {self.client.user.name}!", inline=False)
+                    name=other_embeds["clean"]["If-Correct-Value"]["Field1"]["name"], value=f'{other_embeds["clean"]["If-Correct-Value"]["Field1"]["value"]}'.format(amount, msgtxt, self.client.user.name), inline=False)
                 embed.set_footer(text=f"Requested by {ctx.author.name}")
                 await ctx.send(embed=embed, delete_after=4)
 
@@ -150,7 +151,7 @@ class General(commands.Cog):
                                   icon_url=f"{self.client.user.avatar_url}")
                 embed2.set_thumbnail(url=get_embeds.ErrorEmbeds.THUMBNAIL)
                 embed2.add_field(
-                    name="Error:", value=f"Please enter a value below 100!", inline=False)
+                    name=other_embeds["clean"]["Else"]["Field1"]["name"], value=f'{other_embeds["clean"]["Else"]["Field1"]["value"]}'.format(checkval), inline=False)
                 embed2.set_footer(text=f"Requested by {ctx.author.name}")
                 await ctx.send(embed=embed2)
 
