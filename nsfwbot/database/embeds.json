@@ -40,8 +40,22 @@
             "Filed1":{
                 "name":"Error",
                 "value":"You haven't passed the needed arguments for this command to run properly"
+            },
+            "Field2":{
+                "name":"Possible Fix",
+                "value":"use `{}help all` to list out all the command and check the proper usage of the command you used"
+            }
+        },
+        
+        "ping": {
+            "title":"Response Time",
+            "thumbnail-link":"https://cdn.discordapp.com/attachments/877796755234783273/879311068097290320/PngItem_1526969.png",
+            "Field1": {
+                "name": "Ping :timer:",
+                "value": "{} ms"
             }
         }
+        
     
     }
 }

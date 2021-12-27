@@ -55,10 +55,10 @@ class General(commands.Cog):
             embed.set_thumbnail(
                 url=other_embeds["MissingRequiredArgumentError"]["thumbnail-link"])
             embed.add_field(
-                name=other_embeds["MissingRequiredArgumentError"]["Filed1"]["name"], value=other_embeds["MissingRequiredArgumentError"]["title"]["value"], inline=True)
+                name=other_embeds["MissingRequiredArgumentError"]["Filed1"]["name"], value=other_embeds["MissingRequiredArgumentError"]["Filed1"]["value"], inline=True)
             embed.add_field(
                 # name="Possible Fix", value=f"use `{get_main.BotMainDB.MESSAGE_PREFIX}help all` to list out all the command and check the proper usage of the command you used", inline=True)
-                name=other_embeds["MissingRequiredArgumentError"]["title"], value=f"{other_embeds['MissingRequiredArgumentError']['title']}".format(get_main.BotMainDB.MESSAGE_PREFIX), inline=True)
+                name=other_embeds["MissingRequiredArgumentError"]["Field2"]["name"], value=f"{other_embeds['MissingRequiredArgumentError']['Field2']['value']}".format(get_main.BotMainDB.MESSAGE_PREFIX), inline=True)
             await ctx.send(embed=embed)
             return
 
@@ -66,14 +66,14 @@ class General(commands.Cog):
     async def ping(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
-            embed = discord.Embed(title="Response Time",
+            embed = discord.Embed(title=other_embeds["ping"]["title"],
                                   color=get_embeds.Common.COLOR)
             embed.set_author(name=f"{self.client.user.name}",
                              icon_url=f"{self.client.user.avatar_url}")
             embed.set_thumbnail(
-                url="https://cdn.discordapp.com/attachments/877796755234783273/879311068097290320/PngItem_1526969.png")
+                url=other_embeds["ping"]["thumbnail-link"])
             embed.add_field(
-                name=f"Ping :timer:", value=f"{round(self.client.latency * 1000)} ms", inline=False)
+                name=other_embeds["ping"]["Field1"]["name"], value=f'{other_embeds["ping"]["Field1"]["value"]}'.format(round(self.client.latency * 1000)), inline=False)
             embed.set_footer(text=f"Requested by {ctx.author.name}")
             await loading_message.delete()
             await ctx.send(embed=embed)
