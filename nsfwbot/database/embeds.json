@@ -54,8 +54,15 @@
                 "name": "Ping :timer:",
                 "value": "{} ms"
             }
+        },
+
+        "uptime": {
+            "Field1": {
+                "name":"The bot was online for: ",
+                "value": ":alarm_clock: {}"
+            }
         }
-        
+
     
     }
 }

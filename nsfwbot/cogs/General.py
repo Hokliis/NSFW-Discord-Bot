@@ -99,8 +99,8 @@ class General(commands.Cog):
             difference = int(round(current_time - self.start_time))
             text = str(dttimedelta(seconds=difference))
             embed = discord.Embed(color=get_embeds.Common.COLOR)
-            embed.add_field(name="The bot was online for: ",
-                            value=f":alarm_clock: {text}", inline=False)
+            embed.add_field(name=other_embeds["uptime"]["Field1"]["name"],
+                            value=f'{other_embeds["uptime"]["Field1"]["value"]}'.format(text), inline=False)
             embed.set_footer(text=f"Requested by {ctx.author.name}")
             await loading_message.delete()
             await ctx.send(embed=embed)
