@@ -24,7 +24,24 @@
         "THUMBNAIL": "",
         "COLOR": "red"
     },
+
     "OTHER": {
-        
+
+        "MissingPermissionError":{
+            "title":"ERROR",
+            "description":"`You don't have the permissions required to use this command!`",
+            "thumbnail-link":"https://cdn.discordapp.com/attachments/877796755234783273/879298565380386846/sign-red-error-icon-1.png"
+        },
+
+        "MissingRequiredArgumentError": {
+            "title":"Something is wrong!",
+            "description":"An error has been occured!",
+            "thumbnail-link":"https://cdn.discordapp.com/attachments/877796755234783273/879298565380386846/sign-red-error-icon-1.png",
+            "Filed1":{
+                "name":"Error",
+                "value":"You haven't passed the needed arguments for this command to run properly"
+            }
+        }
+    
     }
 }

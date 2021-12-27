@@ -5,6 +5,7 @@ from time import time as nowtime
 import discord
 from discord.ext import commands
 from nsfwbot.database import get_embeds, get_main
+from nsfwbot.database.get_embeds import other_embeds
 
 
 class General(commands.Cog):
@@ -38,26 +39,26 @@ class General(commands.Cog):
     async def on_command_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions):
             embed = discord.Embed(
-                title="ERROR", description="`You don't have the permissions required to use this command!`", color=get_embeds.Common.COLOR)
+                title=other_embeds["MissingPermissionError"]["title"], description=other_embeds["MissingPermissionError"]["description"], color=get_embeds.Common.COLOR)
             embed.set_author(name=f"{self.client.user.name}",
                              icon_url=f"{self.client.user.avatar_url}")
             embed.set_thumbnail(
-                url="https://cdn.discordapp.com/attachments/877796755234783273/879298565380386846/sign-red-error-icon-1.png")
+                url=["MissingPermissionError"]["thumbnail-link"])
             await ctx.send(embed=embed)
             return
 
         if isinstance(error, commands.MissingRequiredArgument):
             embed = discord.Embed(
-                title="Something is wrong!", description="An error has been occured!", color=get_embeds.Common.COLOR)
+                title=other_embeds["MissingRequiredArgumentError"]["title"], description=other_embeds["MissingRequiredArgumentError"]["description"], color=get_embeds.Common.COLOR)
             embed.set_author(name=f"{self.client.user.name}",
                              icon_url=f"{self.client.user.avatar_url}")
             embed.set_thumbnail(
-                url="https://cdn.discordapp.com/attachments/877796755234783273/879298565380386846/sign-red-error-icon-1.png")
+                url=other_embeds["MissingRequiredArgumentError"]["thumbnail-link"])
             embed.add_field(
-                name="Error", value="You haven't passed the needed arguments for this command to run properly", inline=True)
+                name=other_embeds["MissingRequiredArgumentError"]["Filed1"]["name"], value=other_embeds["MissingRequiredArgumentError"]["title"]["value"], inline=True)
             embed.add_field(
                 # name="Possible Fix", value=f"use `{get_main.BotMainDB.MESSAGE_PREFIX}help all` to list out all the command and check the proper usage of the command you used", inline=True)
-                name="Possible Fix", value=f"use `{self.client.get_prefix}help all` to list out all the command and check the proper usage of the command you used", inline=True)
+                name=other_embeds["MissingRequiredArgumentError"]["title"], value=f"{other_embeds['MissingRequiredArgumentError']['title']}".format(get_main.BotMainDB.MESSAGE_PREFIX), inline=True)
             await ctx.send(embed=embed)
             return
 

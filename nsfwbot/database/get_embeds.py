@@ -2,7 +2,7 @@ import json
 
 with open("nsfwbot/database/embeds.json", "r", encoding="utf-8") as _file_all:
     _others = json.load(_file_all)
-    other = _others["OTHER"]
+    other_embeds = _others["OTHER"]
 
 
 class PleaseWait:
