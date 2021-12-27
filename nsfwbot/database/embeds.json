@@ -23,5 +23,8 @@
     "HELP":{
         "THUMBNAIL": "",
         "COLOR": "red"
+    },
+    "OTHER": {
+        
     }
 }

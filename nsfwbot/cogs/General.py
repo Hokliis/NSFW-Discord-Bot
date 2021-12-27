@@ -177,7 +177,7 @@ class General(commands.Cog):
             embed3.set_thumbnail(
                 url=get_embeds.Help.THUMBNAIL)
             embed3.add_field(
-                name="Crypto:", value=f"", inline=False)
+                name="EPorner:", value=f"{bp}pornlink [query='hardcore']\n{bp}pornlinks <amount> <query>", inline=False)
 
             embed3.set_footer(text=f"Requested by {ctx.author.name}")
             await loading_message.delete()

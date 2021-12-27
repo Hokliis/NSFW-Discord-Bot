@@ -1,64 +1,68 @@
 import json
 
+with open("nsfwbot/database/embeds.json", "r", encoding="utf-8") as _file_all:
+    _others = json.load(_file_all)
+    other = _others["OTHER"]
+
 
 class PleaseWait:
-    with open("nsfwbot/database/embeds.json", "r", encoding="utf-8") as file:
-        embed = json.load(file)
+    with open("nsfwbot/database/embeds.json", "r", encoding="utf-8") as _file:
+        _embed = json.load(_file)
 
-    TITLE = embed["PleaseWaitEmbed"]["TITLE"]
-    DESCRIPTION = embed["PleaseWaitEmbed"]["DESCRIPTION"]
-    THUMBNAIL = embed["PleaseWaitEmbed"]["THUMBNAIL"]
-    FOOTER = embed["PleaseWaitEmbed"]["FOOTER"]
+    TITLE = _embed["PleaseWaitEmbed"]["TITLE"]
+    DESCRIPTION = _embed["PleaseWaitEmbed"]["DESCRIPTION"]
+    THUMBNAIL = _embed["PleaseWaitEmbed"]["THUMBNAIL"]
+    FOOTER = _embed["PleaseWaitEmbed"]["FOOTER"]
 
-    if embed["PleaseWaitEmbed"]["COLOR"] == "red":
+    if _embed["PleaseWaitEmbed"]["COLOR"] == "red":
         COLOR = 0xff0000
-    elif embed["PleaseWaitEmbed"]["COLOR"] == "green":
+    elif _embed["PleaseWaitEmbed"]["COLOR"] == "green":
         COLOR = 0x00ff00
-    elif embed["PleaseWaitEmbed"]["COLOR"] == "blue":
+    elif _embed["PleaseWaitEmbed"]["COLOR"] == "blue":
         COLOR = 0x0000ff
 
-    AUTHOR_NAME = embed["PleaseWaitEmbed"]["AUTHOR_NAME"]
-    AUTHOR_URL = embed["PleaseWaitEmbed"]["AUTHOR_URL"]
+    AUTHOR_NAME = _embed["PleaseWaitEmbed"]["AUTHOR_NAME"]
+    AUTHOR_URL = _embed["PleaseWaitEmbed"]["AUTHOR_URL"]
 
 
 class ErrorEmbeds:
-    with open("nsfwbot/database/embeds.json", "r", encoding="utf-8") as file:
-        embed = json.load(file)
+    with open("nsfwbot/database/embeds.json", "r", encoding="utf-8") as _file:
+        _embed = json.load(_file)
 
-    TITLE = embed["ERROR"]["TITLE"]
-    DESCRIPTION = embed["ERROR"]["DESCRIPTION"]
-    THUMBNAIL = embed["ERROR"]["THUMBNAIL"]
-    FIELD_NAME = embed["ERROR"]["FIELD_NAME"]
+    TITLE = _embed["ERROR"]["TITLE"]
+    DESCRIPTION = _embed["ERROR"]["DESCRIPTION"]
+    THUMBNAIL = _embed["ERROR"]["THUMBNAIL"]
+    FIELD_NAME = _embed["ERROR"]["FIELD_NAME"]
 
-    if embed["ERROR"]["COLOR"] == "red":
+    if _embed["ERROR"]["COLOR"] == "red":
         COLOR = 0xff0000
-    elif embed["ERROR"]["COLOR"] == "green":
+    elif _embed["ERROR"]["COLOR"] == "green":
         COLOR = 0x00ff00
-    elif embed["ERROR"]["COLOR"] == "blue":
+    elif _embed["ERROR"]["COLOR"] == "blue":
         COLOR = 0x0000ff
 
 
 class Common:
-    with open("nsfwbot/database/embeds.json", "r", encoding="utf-8") as file:
-        embed = json.load(file)
+    with open("nsfwbot/database/embeds.json", "r", encoding="utf-8") as _file:
+        _embed = json.load(_file)
 
-    if embed["COMMON"]["COLOR"] == "red":
+    if _embed["COMMON"]["COLOR"] == "red":
         COLOR = 0xff0000
-    elif embed["COMMON"]["COLOR"] == "green":
+    elif _embed["COMMON"]["COLOR"] == "green":
         COLOR = 0x00ff00
-    elif embed["COMMON"]["COLOR"] == "blue":
+    elif _embed["COMMON"]["COLOR"] == "blue":
         COLOR = 0x0000ff
 
 
 class Help:
-    with open("nsfwbot/database/embeds.json", "r", encoding="utf-8") as file:
-        embed = json.load(file)
+    with open("nsfwbot/database/embeds.json", "r", encoding="utf-8") as _file:
+        _embed = json.load(_file)
 
-    if embed["HELP"]["COLOR"] == "red":
+    if _embed["HELP"]["COLOR"] == "red":
         COLOR = 0xff0000
-    elif embed["HELP"]["COLOR"] == "green":
+    elif _embed["HELP"]["COLOR"] == "green":
         COLOR = 0x00ff00
-    elif embed["HELP"]["COLOR"] == "blue":
+    elif _embed["HELP"]["COLOR"] == "blue":
         COLOR = 0x0000ff
 
-    THUMBNAIL = embed["HELP"]["COLOR"]
+    THUMBNAIL = _embed["HELP"]["COLOR"]
