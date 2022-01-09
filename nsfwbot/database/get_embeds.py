@@ -65,4 +65,4 @@ class Help:
     elif _embed["HELP"]["COLOR"] == "blue":
         COLOR = 0x0000ff
 
-    THUMBNAIL = _embed["HELP"]["COLOR"]
+    THUMBNAIL = _embed["HELP"]["THUMBNAIL"]

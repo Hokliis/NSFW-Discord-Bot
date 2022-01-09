@@ -21,7 +21,7 @@
         "COLOR":"red"
     },
     "HELP":{
-        "THUMBNAIL": "",
+        "THUMBNAIL": "https://cdn.discordapp.com/attachments/877796755234783273/929697981626716190/Help-Logo.png",
         "COLOR": "red"
     },
 
@@ -77,7 +77,16 @@
                     "value": "Please enter a value below {}!"
                 }
             }
+        },
+
+        "help": {
+            "title": ":gear: Help",
+            "fields": {
+                "EPorner": "{prefix}pornlink [query='hardcore']\n{prefix}pornlinks <amount> <query>",
+                "test": "123 lol"
+            }
         }
+
 
     
     }
