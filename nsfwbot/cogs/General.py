@@ -43,7 +43,7 @@ class General(commands.Cog):
             embed.set_author(name=f"{self.client.user.name}",
                              icon_url=f"{self.client.user.avatar_url}")
             embed.set_thumbnail(
-                url=["MissingPermissionError"]["thumbnail-link"])
+                url=other_embeds["MissingPermissionError"]["thumbnail-link"])
             await ctx.send(embed=embed)
             return
 
@@ -173,13 +173,15 @@ class General(commands.Cog):
 
         try:
             embed3 = discord.Embed(
-                title=":gear: Help", color=get_embeds.Help.COLOR)
+                title=other_embeds["help"]["title"], color=get_embeds.Help.COLOR)
             embed3.set_author(
                 name=f"{self.client.user.name}", icon_url=f"{self.client.user.avatar_url}")
             embed3.set_thumbnail(
                 url=get_embeds.Help.THUMBNAIL)
-            embed3.add_field(
-                name="EPorner:", value=f"{bp}pornlink [query='hardcore']\n{bp}pornlinks <amount> <query>", inline=False)
+
+            for k, v in other_embeds["help"]["fields"].items():
+                embed3.add_field(
+                    name=str(k), value=str(v).format(prefix=bp), inline=False)
 
             embed3.set_footer(text=f"Requested by {ctx.author.name}")
             await loading_message.delete()
