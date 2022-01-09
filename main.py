@@ -11,7 +11,7 @@ bot_current_version = get_main.BotMainDB.BOT_VERSION
 bot_manager_ids = get_main.BotMainDB.DEV_AND_OWNERS
 
 
-with open("token", "r", encoding="utf-8") as tokenfile:
+with open("token.txt", "r", encoding="utf-8") as tokenfile:
     token = tokenfile.read()
 
 
