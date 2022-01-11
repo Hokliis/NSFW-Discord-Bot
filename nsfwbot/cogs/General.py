@@ -6,6 +6,7 @@ import discord
 from discord.ext import commands
 from nsfwbot.database import get_embeds, get_main
 from nsfwbot.database.get_embeds import other_embeds
+from nsfwbot.database.get_main import other_settings
 
 
 class General(commands.Cog):
@@ -32,7 +33,7 @@ class General(commands.Cog):
         print(f'Discord.py API version: {discord.__version__}')
         print(f'Python version: {cur_python_version()}')
         self.start_time = nowtime()
-        await self.client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"teamsds.net/discord"))
+        await self.client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"YOU MOM"))
         print('Bot is ready!')
 
     @commands.Cog.listener()
