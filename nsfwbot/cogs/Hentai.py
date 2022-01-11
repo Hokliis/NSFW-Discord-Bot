@@ -10,7 +10,7 @@ from nsfwbot.database.get_embeds import other_embeds
 from nsfwbot.database.get_main import other_settings
 
 
-class Other(commands.Cog):
+class Hentai(commands.Cog):
     def __init__(self, client: commands.Bot):
         self.client = client
         # This is the please-wait/Loading embed
@@ -2082,4 +2082,4 @@ class Other(commands.Cog):
 
 
 def setup(client: commands.Bot):
-    client.add_cog(Other(client))
+    client.add_cog(Hentai(client))

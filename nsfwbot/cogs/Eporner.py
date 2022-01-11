@@ -6,7 +6,7 @@ from discord.ext import commands
 from nsfwbot.database import get_embeds, get_main
 
 
-class Pornlink(commands.Cog):
+class Eporner(commands.Cog):
     def __init__(self, client: commands.Bot):
         self.client = client
         # This is the please-wait/Loading embed
@@ -200,4 +200,4 @@ class Pornlink(commands.Cog):
 
 
 def setup(client: commands.Bot):
-    client.add_cog(Pornlink(client))
+    client.add_cog(Eporner(client))
