@@ -5,7 +5,7 @@
     "DEV_AND_OWNERS":[584662127470575616],
 
     "OTHER": {
-        "Others-Cog": {
+        "HentaiCog": {
             "lesbian": {
                 "APIlink": "https://nekos.life/api/v2/img/les"
             },
@@ -18,6 +18,9 @@
             "hentai": {
                 "APIlink": "https://nekos.life/api/v2/img/Random_hentai_gif"
             },
+            "hentaii": {
+                "APIlink": "https://nekos.life/api/v2/img/hentai"
+            },
             "boobs": {
                 "APIlink":"https://nekos.life/api/v2/img/boobs"
             },
@@ -27,9 +30,88 @@
             "blowjob": {
                 "APIlink": "https://nekos.life/api/v2/img/blowjob"
             },
+            "blowjobi": {
+                "APIlink": "https://nekos.life/api/v2/img/blowjob"
+            },
             "lewd": {
                 "APIlink": "https://nekos.life/api/v2/img/nsfw_neko_gif"
+            },
+            "yuri": {
+                "APIlink": "https://nekos.life/api/v2/img/yuri"
+            },
+            "erofeet": {
+                "APIlink": "https://nekos.life/api/v2/img/erofeet"
+            },
+            "erok": {
+                "APIlink": "https://nekos.life/api/v2/img/erok"
+            },
+            "hololewd": {
+                "APIlink": "https://nekos.life/api/v2/img/hololewd"
+            },
+            "lewdk": {
+                "APIlink":"https://nekos.life/api/v2/img/lewdk"
+            },
+            "keta": {
+                "APIlink":"https://nekos.life/api/v2/img/keta"
+            },
+            "eroyuri": {
+                "APIlink": "https://nekos.life/api/v2/img/eroyuri"
+            },
+            "pussyi": {
+                "APIlink": "https://nekos.life/api/v2/img/pussy_jpg"
+            },
+            "pussy": {
+                "APIlink": "https://nekos.life/api/v2/img/pussy"
+            },
+            "cumi": {
+                "APIlink": "https://nekos.life/api/v2/img/cum_jpg"
+            },
+            "cum": {
+                "APIlink": "https://nekos.life/api/v2/img/cum"
+            },
+            "lewdkemo": {
+                "APIlink": "https://nekos.life/api/v2/img/lewdkemo"
+            },
+            "spank": {
+                "APIlink": "https://nekos.life/api/v2/img/spank"
+            },
+            "smallboobs": {
+                "APIlink": "https://nekos.life/api/v2/img/smallboobs"
+            },
+            "avatar": {
+                "APIlink":"https://nekos.life/api/v2/img/nsfw_avatar"
+            },
+            "solo": {
+                "APIlink":"https://nekos.life/api/v2/img/solog"
+            },
+            "soloi": {
+                "APIlink":"https://nekos.life/api/v2/img/solo"
+            },
+            "ero": {
+                "APIlink":"https://nekos.life/api/v2/img/ero"
+            },
+            "eron": {
+                "APIlink":"https://nekos.life/api/v2/img/ero"
+            },
+            "erokemo": {
+                "APIlink":"https://nekos.life/api/v2/img/ero"
+            },
+            "trap": {
+                "APIlink":"https://nekos.life/api/v2/img/trap"
+            },
+            "holoero": {
+                "APIlink":"https://nekos.life/api/v2/img/holoero"
+            },
+            "gasm": {
+                "APIlink":"https://nekos.life/api/v2/img/gasm"
+            },
+            "futanari": {
+                "APIlink":"https://nekos.life/api/v2/img/futanari"
+            },
+            "pwank": {
+                "APIlink":"https://nekos.life/api/v2/img/pwankg"
             }
+            
         }
     }
 }
