@@ -18,7 +18,11 @@ with open("token.txt", "r", encoding="utf-8") as tokenfile:
 client = commands.Bot(command_prefix=bot_prefix)
 
 client.load_extension("nsfwbot.cogs.General")
+print("[+] Loaded: nsfwbot.cogs.General")
 client.load_extension("nsfwbot.cogs.Hentai")
+print("[+] Loaded: nsfwbot.cogs.Hentai")
+client.load_extension("nsfwbot.cogs.Eporner")
+print("[+] Loaded: nsfwbot.cogs.Eporner")
 
 
 @client.command()
