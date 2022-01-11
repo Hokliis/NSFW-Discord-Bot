@@ -6,6 +6,8 @@ import aiohttp
 import datetime
 from discord.ext import commands
 from nsfwbot.database import get_embeds, get_main
+from nsfwbot.database.get_embeds import other_embeds
+from nsfwbot.database.get_main import other_settings
 
 
 class Other(commands.Cog):
@@ -23,8 +25,8 @@ class Other(commands.Cog):
     async def lesbian(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
-            async with aiohttp.ClientSession() as pornSession:
-                async with pornSession.get(f'https://nekos.life/api/v2/img/les') as jsondata:
+            async with aiohttp.ClientSession(other_settings["Others-Cog"]["lesbian"]["APIlink"]) as pornSession:
+                async with pornSession.get() as jsondata:
                     if not 300 > jsondata.status >= 200:
                         embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
                                                description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
@@ -33,7 +35,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Bad status code from API", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["lesbian"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -50,7 +52,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Unable to convert API result to json", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["lesbian"]["JSONerror"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -82,7 +84,7 @@ class Other(commands.Cog):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
             async with aiohttp.ClientSession() as pornSession:
-                async with pornSession.get(f'https://nekos.life/api/v2/img/anal') as jsondata:
+                async with pornSession.get(other_settings["Others-Cog"]["anal"]["APIlink"]) as jsondata:
                     if not 300 > jsondata.status >= 200:
                         embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
                                                description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
@@ -91,7 +93,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Bad status code from API", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["anal"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -108,7 +110,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Unable to convert API result to json", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["anal"]["JSONerror"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -141,7 +143,7 @@ class Other(commands.Cog):
         try:
             async with aiohttp.ClientSession() as pornSession:
                 # feetg for gif
-                async with pornSession.get(f'https://nekos.life/api/v2/img/feetg') as jsondata:
+                async with pornSession.get(other_settings["Others-Cog"]["feet"]["APIlink"]) as jsondata:
                     if not 300 > jsondata.status >= 200:
                         embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
                                                description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
@@ -150,7 +152,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Bad status code from API", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["feet"]["JSONerror"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -167,7 +169,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Unable to convert API result to json", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["feet"]["JSONerror"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -199,7 +201,7 @@ class Other(commands.Cog):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
             async with aiohttp.ClientSession() as pornSession:
-                async with pornSession.get(f'https://nekos.life/api/v2/img/Random_hentai_gif') as jsondata:
+                async with pornSession.get(other_settings["Others-Cog"]["hentai"]["APIlink"]) as jsondata:
                     if not 300 > jsondata.status >= 200:
                         embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
                                                description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
@@ -208,7 +210,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Bad status code from API", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["hentai"]["JSONerror"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -225,7 +227,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Unable to convert API result to json", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["hentai"]["JSONerror"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -257,7 +259,7 @@ class Other(commands.Cog):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
             async with aiohttp.ClientSession() as pornSession:
-                async with pornSession.get(f'https://nekos.life/api/v2/img/boobs') as jsondata:
+                async with pornSession.get(other_settings["Others-Cog"]["boobs"]["APIlink"]) as jsondata:
                     if not 300 > jsondata.status >= 200:
                         embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
                                                description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
@@ -266,7 +268,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Bad status code from API", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["boobs"]["JSONerror"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -283,7 +285,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Unable to convert API result to json", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["boobs"]["JSONerror"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -315,7 +317,7 @@ class Other(commands.Cog):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
             async with aiohttp.ClientSession() as pornSession:
-                async with pornSession.get(f'https://nekos.life/api/v2/img/tits') as jsondata:
+                async with pornSession.get(other_settings["Others-Cog"]["tits"]["APIlink"]) as jsondata:
                     if not 300 > jsondata.status >= 200:
                         embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
                                                description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
@@ -324,7 +326,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Bad status code from API", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["tits"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -341,7 +343,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Unable to convert API result to json", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["tits"]["JSONerror"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -373,7 +375,7 @@ class Other(commands.Cog):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
             async with aiohttp.ClientSession() as pornSession:
-                async with pornSession.get(f'https://nekos.life/api/v2/img/blowjob') as jsondata:
+                async with pornSession.get(other_settings["Others-Cog"]["blowjob"]["APIlink"]) as jsondata:
                     if not 300 > jsondata.status >= 200:
                         embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
                                                description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
@@ -382,7 +384,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Bad status code from API", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["blowjob"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -399,7 +401,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Unable to convert API result to json", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["blowjob"]["JSONerror"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -431,7 +433,7 @@ class Other(commands.Cog):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
             async with aiohttp.ClientSession() as pornSession:
-                async with pornSession.get(f'https://nekos.life/api/v2/img/nsfw_neko_gif') as jsondata:
+                async with pornSession.get(other_settings["Others-Cog"]["lewd"]["APIlink"]) as jsondata:
                     if not 300 > jsondata.status >= 200:
                         embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
                                                description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
@@ -440,7 +442,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Bad status code from API", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["lewd"]["JSONerror"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -457,7 +459,7 @@ class Other(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"Unable to convert API result to json", inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["lewd"]["JSONerror"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()

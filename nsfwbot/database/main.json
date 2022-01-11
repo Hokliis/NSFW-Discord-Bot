@@ -5,6 +5,31 @@
     "DEV_AND_OWNERS":[584662127470575616],
 
     "OTHER": {
-        
+        "Others-Cog": {
+            "lesbian": {
+                "APIlink": "https://nekos.life/api/v2/img/les"
+            },
+            "anal": {
+                "APIlink": "https://nekos.life/api/v2/img/anal"
+            },
+            "feet": {
+                "APIlink": "https://nekos.life/api/v2/img/feetg"
+            },
+            "hentai": {
+                "APIlink": "https://nekos.life/api/v2/img/Random_hentai_gif"
+            },
+            "boobs": {
+                "APIlink":"https://nekos.life/api/v2/img/boobs"
+            },
+            "tits": {
+                "APIlink":"https://nekos.life/api/v2/img/tits"
+            },
+            "blowjob": {
+                "APIlink": "https://nekos.life/api/v2/img/blowjob"
+            },
+            "lewd": {
+                "APIlink": "https://nekos.life/api/v2/img/nsfw_neko_gif"
+            }
+        }
     }
 }
