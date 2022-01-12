@@ -442,7 +442,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["lewd"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["lewd"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -528,7 +528,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["hentaii"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["hentaii"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -586,7 +586,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["yuri"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["yuri"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -644,7 +644,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["erofeet"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["erofeet"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -702,7 +702,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["erok"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["erok"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -760,7 +760,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["hololewd"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["hololewd"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -818,7 +818,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["lewdk"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["lewdk"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -876,7 +876,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["keta"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["keta"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -934,7 +934,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["eroyuri"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["eroyuri"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -992,7 +992,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["pussyi"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["pussyi"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1050,7 +1050,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["pussy"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["pussy"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1108,7 +1108,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["cumi"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["cumi"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1166,7 +1166,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["cum"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["cum"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1224,7 +1224,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["spank"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["spank"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1282,7 +1282,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["lewdkemo"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["lewdkemo"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1340,7 +1340,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["smallboobs"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["smallboobs"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1398,7 +1398,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["avatar"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["avatar"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1456,7 +1456,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["soloi"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["soloi"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1514,7 +1514,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["solo"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["solo"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1572,7 +1572,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["ero"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["ero"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1630,7 +1630,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["eron"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["eron"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1688,7 +1688,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["erokemo"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["erokemo"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1746,7 +1746,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["trap"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["trap"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1804,7 +1804,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["blowjob"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["blowjob"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1862,7 +1862,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["holoero"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["holoero"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1920,7 +1920,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["gasm"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["gasm"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -1978,7 +1978,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["futanari"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["futanari"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -2036,7 +2036,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["pwank"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["pwank"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
@@ -2053,7 +2053,7 @@ class Hentai(commands.Cog):
                         embed3.set_thumbnail(
                             url=get_embeds.ErrorEmbeds.THUMBNAIL)
                         embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["pwank"]["JSONerror"], inline=False)
+                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["pwank"]["StatusCodeError"], inline=False)
                         embed3.set_footer(
                             text=f"Requested by {ctx.author.name}")
                         await loading_message.delete()
