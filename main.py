@@ -19,8 +19,10 @@ client = commands.Bot(command_prefix=bot_prefix)
 
 client.load_extension("nsfwbot.cogs.General")
 print("[+] Loaded: nsfwbot.cogs.General")
-client.load_extension("nsfwbot.cogs.Hentai")
-print("[+] Loaded: nsfwbot.cogs.Hentai")
+client.load_extension("nsfwbot.cogs.HentaiOld")
+print("[+] Loaded: nsfwbot.cogs.HentaiOld")
+client.load_extension("nsfwbot.cogs.HentaiNew")
+print("[+] Loaded: nsfwbot.cogs.HentaiNew")
 client.load_extension("nsfwbot.cogs.Eporner")
 print("[+] Loaded: nsfwbot.cogs.Eporner")
 
