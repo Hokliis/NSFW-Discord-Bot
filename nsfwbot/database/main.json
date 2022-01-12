@@ -112,6 +112,47 @@
                 "APIlink":"https://nekos.life/api/v2/img/pwankg"
             }
             
+        },
+
+        "HentaiNew": {
+            "gangband": "/hmtai/v1/gangband",
+            "manga": "/hmtai/v1/manga",
+            "nsfwNeko": "/hmtai/v1/nsfwNeko",
+            "sfwNeko": "/hmtai/v1/sfwNeko",
+
+            "ass": "/hmtai/v2_4/ass",
+            "bdsm": "/hmtai/v2_4/bdsm",
+            "blowjob": "/hmtai/v2_4/blowjob",
+            "cuckold": "/hmtai/v2_4/cuckold",
+            "cum": "/hmtai/v2_4/cum",
+            "ero": "/hmtai/v2_4/ero",
+            "femdom": "/hmtai/v2_4/femdom",
+            "foot": "/hmtai/v2_4/foot",
+            "gangbang": "/hmtai/v2_4/gangbang",
+            "ahegao": "/hmtai/v2_4/ahegao",
+            "glasses": "/hmtai/v2_4/glasses",
+            "hentai": "/hmtai/v2_4/hentai",
+            "hnt_gifs": "/hmtai/v2_4/hnt_gifs",
+            "uniform": "/hmtai/v2_4/uniform",
+            "nsfwneko": "/hmtai/v2_4/nsfwneko",
+            "nsfwMobileWallpaper": "/hmtai/v2_4/nsfwMobileWallpaper",
+            "yuri": "/hmtai/v2_4/yuri",
+            "tentacles": "/hmtai/v2_4/tentacles",
+            "thighs": "/hmtai/v2_4/thighs",
+            "pussy": "/hmtai/v2_4/pussy",
+            "panties": "/hmtai/v2_4/panties",
+            "orgy": "/hmtai/v2_4/orgy",
+            "mobileWallpaper": "/hmtai/v2_4/mobileWallpaper",
+            "masturbation": "/hmtai/v2_4/masturbation",
+            "jahy": "/hmtai/v2_4/jahy",
+            "wallpaper": "/hmtai/v2_4/wallpaper",
+            "zettaiRyouiki": "/hmtai/v2_4/zettaiRyouiki",
+            "creampie": "/hmtai/v2_4/creampie",
+            "boobjob": "/hmtai/v2_4/boobjob",
+            "incest": "/hmtai/v2_4/incest",
+            "elves": "/hmtai/v2_4/elves",
+            "public": "/hmtai/v2_4/public"
+
         }
     }
 }
