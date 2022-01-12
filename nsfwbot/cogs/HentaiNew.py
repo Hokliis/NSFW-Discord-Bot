@@ -20,68 +20,83 @@ class Hentai(commands.Cog):
             name=get_embeds.PleaseWait.AUTHOR_NAME, icon_url=get_embeds.PleaseWait.AUTHOR_URL)
         self.please_wait_emb.set_thumbnail(url=get_embeds.PleaseWait.THUMBNAIL)
         self.please_wait_emb.set_footer(text=get_embeds.PleaseWait.FOOTER)
+        self.bp = get_main.BotMainDB.MESSAGE_PREFIX
+        self.datadict = other_settings["HentaiNew"]
+
+    async def processLink(self, commandName: str = None):
+        if commandName is None:
+            return print("Invalid Usage for processLink()")
+
+        urlFirst = "https://api.l0calserve4.ml"
+        urlLast = str(self.datadict[commandName])
+        urlFinal = urlFirst + urlLast
+
+        return urlFinal
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        pass
+        if self.client.user == message.author:
+            return
 
-    @commands.command()
-    async def lesbian(self, ctx):
-        loading_message = await ctx.send(embed=self.please_wait_emb)
-        try:
-            async with aiohttp.ClientSession(other_settings["HentaiCog"]["lesbian"]["APIlink"]) as pornSession:
-                async with pornSession.get() as jsondata:
-                    if not 300 > jsondata.status >= 200:
-                        embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
-                                               description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
-                        embed3.set_author(name=f"{self.client.user.name}",
-                                          icon_url=f"{self.client.user.avatar_url}")
-                        embed3.set_thumbnail(
-                            url=get_embeds.ErrorEmbeds.THUMBNAIL)
-                        embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["HentaiOther"]["StatusCodeError"], inline=False)
-                        embed3.set_footer(
-                            text=f"Requested by {ctx.author.name}")
-                        await loading_message.delete()
-                        await ctx.send(embed=embed3)
-                        return
+        msg = str(message.content)
+        if msg.startswith(f'{self.bp}'):
 
-                    try:
-                        res = await jsondata.json()
-                    except:
-                        embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
-                                               description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
-                        embed3.set_author(name=f"{self.client.user.name}",
-                                          icon_url=f"{self.client.user.avatar_url}")
-                        embed3.set_thumbnail(
-                            url=get_embeds.ErrorEmbeds.THUMBNAIL)
-                        embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["HentaiOther"]["JSONerror"], inline=False)
-                        embed3.set_footer(
-                            text=f"Requested by {ctx.author.name}")
-                        await loading_message.delete()
-                        await ctx.send(embed=embed3)
-                        return
+            procMsg = msg.split(" ")[0]  # message to be processed
 
-            em = discord.Embed(color=get_embeds.Common.COLOR)
-            em.set_author(name=f"{self.client.user.name}",
-                          icon_url=f"{self.client.user.avatar_url}")
-            em.set_image(url=res['url'])
-            em.set_footer(text=f"Requested by {ctx.author.name}")
-            await loading_message.delete()
-            await ctx.send(embed=em)
+            # Checking if the command exists in some other cog
+            allCommands = [str(c.name) for c in self.client.commands]
+            if procMsg not in allCommands:
+                try:
+                    async with aiohttp.ClientSession(self.processLink(procMsg)) as pornSession:
+                        async with pornSession.get() as jsondata:
+                            if not 300 > jsondata.status >= 200:
+                                embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
+                                                       description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
+                                embed3.set_author(name=f"{self.client.user.name}",
+                                                  icon_url=f"{self.client.user.avatar_url}")
+                                embed3.set_thumbnail(
+                                    url=get_embeds.ErrorEmbeds.THUMBNAIL)
+                                embed3.add_field(
+                                    name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["HentaiOther"]["StatusCodeError"], inline=False)
+                                embed3.set_footer(
+                                    text=f"Requested by {message.author.name}")
+                                await message.send(embed=embed3)
+                                return
 
-        except Exception as e:
-            embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
-                                   description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
-            embed3.set_author(name=f"{self.client.user.name}",
-                              icon_url=f"{self.client.user.avatar_url}")
-            embed3.set_thumbnail(url=get_embeds.ErrorEmbeds.THUMBNAIL)
-            embed3.add_field(
-                name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"{e}", inline=False)
-            embed3.set_footer(text=f"Requested by {ctx.author.name}")
-            await loading_message.delete()
-            await ctx.send(embed=embed3)
+                            try:
+                                res = await jsondata.json()
+                            except:
+                                embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
+                                                       description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
+                                embed3.set_author(name=f"{self.client.user.name}",
+                                                  icon_url=f"{self.client.user.avatar_url}")
+                                embed3.set_thumbnail(
+                                    url=get_embeds.ErrorEmbeds.THUMBNAIL)
+                                embed3.add_field(
+                                    name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["HentaiOther"]["JSONerror"], inline=False)
+                                embed3.set_footer(
+                                    text=f"Requested by {message.author.name}")
+                                await message.send(embed=embed3)
+                                return
+
+                    em = discord.Embed(color=get_embeds.Common.COLOR)
+                    em.set_author(name=f"{self.client.user.name}",
+                                  icon_url=f"{self.client.user.avatar_url}")
+                    em.set_image(url=res['url'])
+                    em.set_footer(text=f"Requested by {message.author.name}")
+                    await message.send(embed=em)
+
+                except Exception as e:
+                    embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
+                                           description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
+                    embed3.set_author(name=f"{self.client.user.name}",
+                                      icon_url=f"{self.client.user.avatar_url}")
+                    embed3.set_thumbnail(url=get_embeds.ErrorEmbeds.THUMBNAIL)
+                    embed3.add_field(
+                        name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"{e}", inline=False)
+                    embed3.set_footer(
+                        text=f"Requested by {message.author.name}")
+                    await message.send(embed=embed3)
 
 
 def setup(client: commands.Bot):
