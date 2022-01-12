@@ -220,7 +220,13 @@
         "pwank": {
             "StatusCodeError":"Bad status code from API",
             "JSONerror": "Unable to convert API result to json"
+        },
+        
+        "HentaiOther": {
+            "StatusCodeError":"Bad status code from API",
+            "JSONerror": "Unable to convert API result to json"
         }
+        
         
 
 
