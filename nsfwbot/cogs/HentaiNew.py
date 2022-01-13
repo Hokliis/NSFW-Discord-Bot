@@ -73,7 +73,6 @@ class Hentai(commands.Cog):
                 em = discord.Embed(color=get_embeds.Common.COLOR)
                 em.set_author(name=f"{self.client.user.name}",
                               icon_url=f"{self.client.user.avatar_url}")
-                print(res)
                 em.set_image(url=res)
                 em.set_footer(text=f"Requested by {message.author.name}")
                 await message.channel.send(embed=em)
