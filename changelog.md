@@ -1,3 +1,8 @@
+# NSFW Discord Bot v2.0
+
+1. Using [`SickSaltFoxu API`](https://docs.l0calserve4.ml/). Read docs from [here](https://docs.l0calserve4.ml/v/english/hmtai-port-api/hmtai-port-or-or-categories)
+2. New commands (not written one by one, its done by checking the message on on_message event and sending the request to the following endpoint and it gets the link)
+
 # NSFW Discord Bot v1.0
 
 1. The fist version of NSFW Discord Bot
