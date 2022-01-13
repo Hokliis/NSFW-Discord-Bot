@@ -33,7 +33,7 @@ class General(commands.Cog):
         print(f'Discord.py API version: {discord.__version__}')
         print(f'Python version: {cur_python_version()}')
         self.start_time = nowtime()
-        await self.client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"YOU MOM"))
+        await self.client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=str(get_main.BotMainDB.BOT_ACTIVITY).format(prefix=get_main.BotMainDB.MESSAGE_PREFIX)))
         print('Bot is ready!')
 
     @commands.Cog.listener()
