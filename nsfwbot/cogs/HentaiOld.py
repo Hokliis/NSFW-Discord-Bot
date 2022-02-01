@@ -1326,63 +1326,64 @@ class Hentai(commands.Cog):
             await loading_message.delete()
             await ctx.send(embed=embed3)
 
-    @commands.command()
-    async def smallboobs(self, ctx):
-        loading_message = await ctx.send(embed=self.please_wait_emb)
-        try:
-            async with aiohttp.ClientSession() as pornSession:
-                async with pornSession.get(other_settings["HentaiCog"]["smallboobs"]["APIlink"]) as jsondata:
-                    if not 300 > jsondata.status >= 200:
-                        embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
-                                               description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
-                        embed3.set_author(name=f"{self.client.user.name}",
-                                          icon_url=f"{self.client.user.avatar_url}")
-                        embed3.set_thumbnail(
-                            url=get_embeds.ErrorEmbeds.THUMBNAIL)
-                        embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["smallboobs"]["StatusCodeError"], inline=False)
-                        embed3.set_footer(
-                            text=f"Requested by {ctx.author.name}")
-                        await loading_message.delete()
-                        await ctx.send(embed=embed3)
-                        return
+    # API endpoint has an issue
+    # @commands.command()
+    # async def smallboobs(self, ctx):
+    #     loading_message = await ctx.send(embed=self.please_wait_emb)
+    #     try:
+    #         async with aiohttp.ClientSession() as pornSession:
+    #             async with pornSession.get(other_settings["HentaiCog"]["smallboobs"]["APIlink"]) as jsondata:
+    #                 if not 300 > jsondata.status >= 200:
+    #                     embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
+    #                                            description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
+    #                     embed3.set_author(name=f"{self.client.user.name}",
+    #                                       icon_url=f"{self.client.user.avatar_url}")
+    #                     embed3.set_thumbnail(
+    #                         url=get_embeds.ErrorEmbeds.THUMBNAIL)
+    #                     embed3.add_field(
+    #                         name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["smallboobs"]["StatusCodeError"], inline=False)
+    #                     embed3.set_footer(
+    #                         text=f"Requested by {ctx.author.name}")
+    #                     await loading_message.delete()
+    #                     await ctx.send(embed=embed3)
+    #                     return
 
-                    try:
-                        res = await jsondata.json()
-                    except:
-                        embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
-                                               description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
-                        embed3.set_author(name=f"{self.client.user.name}",
-                                          icon_url=f"{self.client.user.avatar_url}")
-                        embed3.set_thumbnail(
-                            url=get_embeds.ErrorEmbeds.THUMBNAIL)
-                        embed3.add_field(
-                            name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["smallboobs"]["JSONerror"], inline=False)
-                        embed3.set_footer(
-                            text=f"Requested by {ctx.author.name}")
-                        await loading_message.delete()
-                        await ctx.send(embed=embed3)
-                        return
+    #                 try:
+    #                     res = await jsondata.json()
+    #                 except:
+    #                     embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
+    #                                            description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
+    #                     embed3.set_author(name=f"{self.client.user.name}",
+    #                                       icon_url=f"{self.client.user.avatar_url}")
+    #                     embed3.set_thumbnail(
+    #                         url=get_embeds.ErrorEmbeds.THUMBNAIL)
+    #                     embed3.add_field(
+    #                         name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["smallboobs"]["JSONerror"], inline=False)
+    #                     embed3.set_footer(
+    #                         text=f"Requested by {ctx.author.name}")
+    #                     await loading_message.delete()
+    #                     await ctx.send(embed=embed3)
+    #                     return
 
-            em = discord.Embed(color=get_embeds.Common.COLOR)
-            em.set_author(name=f"{self.client.user.name}",
-                          icon_url=f"{self.client.user.avatar_url}")
-            em.set_image(url=res['url'])
-            em.set_footer(text=f"Requested by {ctx.author.name}")
-            await loading_message.delete()
-            await ctx.send(embed=em)
+    #         em = discord.Embed(color=get_embeds.Common.COLOR)
+    #         em.set_author(name=f"{self.client.user.name}",
+    #                       icon_url=f"{self.client.user.avatar_url}")
+    #         em.set_image(url=res['url'])
+    #         em.set_footer(text=f"Requested by {ctx.author.name}")
+    #         await loading_message.delete()
+    #         await ctx.send(embed=em)
 
-        except Exception as e:
-            embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
-                                   description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
-            embed3.set_author(name=f"{self.client.user.name}",
-                              icon_url=f"{self.client.user.avatar_url}")
-            embed3.set_thumbnail(url=get_embeds.ErrorEmbeds.THUMBNAIL)
-            embed3.add_field(
-                name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"{e}", inline=False)
-            embed3.set_footer(text=f"Requested by {ctx.author.name}")
-            await loading_message.delete()
-            await ctx.send(embed=embed3)
+    #     except Exception as e:
+    #         embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
+    #                                description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
+    #         embed3.set_author(name=f"{self.client.user.name}",
+    #                           icon_url=f"{self.client.user.avatar_url}")
+    #         embed3.set_thumbnail(url=get_embeds.ErrorEmbeds.THUMBNAIL)
+    #         embed3.add_field(
+    #             name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"{e}", inline=False)
+    #         embed3.set_footer(text=f"Requested by {ctx.author.name}")
+    #         await loading_message.delete()
+    #         await ctx.send(embed=embed3)
 
     @commands.command()
     async def avatar(self, ctx):
