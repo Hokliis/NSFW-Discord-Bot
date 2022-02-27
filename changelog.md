@@ -1,3 +1,7 @@
+# NSFW Discord Bot v2.1
+
+1. Removed the `-lesbian` command due to an unidentifiable error
+
 # NSFW Discord Bot v2.0
 
 1. Using [`SickSaltFoxu API`](https://docs.l0calserve4.ml/). Read docs from [here](https://docs.l0calserve4.ml/v/english/hmtai-port-api/hmtai-port-or-or-categories)
