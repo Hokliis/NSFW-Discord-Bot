@@ -35,47 +35,48 @@ class Hentai(commands.Cog):
 
             # Checking if the command exists in some other cog
             allCommands = [str(c.name) for c in self.client.commands]
-            if procMsg not in allCommands:
-                urlFirst = "https://api.l0calserve4.ml"
-                urlLast = str(self.datadict[procMsg])
-                async with aiohttp.ClientSession() as pornSession:
-                    async with pornSession.get(f"{urlFirst}{urlLast}") as jsondata:
-                        if not 300 > jsondata.status >= 200:
-                            embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
-                                                   description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
-                            embed3.set_author(name=f"{self.client.user.name}",
-                                              icon_url=f"{self.client.user.avatar_url}")
-                            embed3.set_thumbnail(
-                                url=get_embeds.ErrorEmbeds.THUMBNAIL)
-                            embed3.add_field(
-                                name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["HentaiOther"]["StatusCodeError"], inline=False)
-                            embed3.set_footer(
-                                text=f"Requested by {message.author.name}")
-                            await message.channel.send(embed=embed3)
-                            return
+            if message.channel.is_nsfw():
+                if procMsg not in allCommands:
+                    urlFirst = "https://api.l0calserve4.ml"
+                    urlLast = str(self.datadict[procMsg])
+                    async with aiohttp.ClientSession() as pornSession:
+                        async with pornSession.get(f"{urlFirst}{urlLast}") as jsondata:
+                            if not 300 > jsondata.status >= 200:
+                                embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
+                                                       description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
+                                embed3.set_author(name=f"{self.client.user.name}",
+                                                  icon_url=f"{self.client.user.avatar_url}")
+                                embed3.set_thumbnail(
+                                    url=get_embeds.ErrorEmbeds.THUMBNAIL)
+                                embed3.add_field(
+                                    name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["HentaiOther"]["StatusCodeError"], inline=False)
+                                embed3.set_footer(
+                                    text=f"Requested by {message.author.name}")
+                                await message.channel.send(embed=embed3)
+                                return
 
-                        try:
-                            res = await jsondata.json()
-                        except:
-                            embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
-                                                   description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
-                            embed3.set_author(name=f"{self.client.user.name}",
-                                              icon_url=f"{self.client.user.avatar_url}")
-                            embed3.set_thumbnail(
-                                url=get_embeds.ErrorEmbeds.THUMBNAIL)
-                            embed3.add_field(
-                                name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["HentaiOther"]["JSONerror"], inline=False)
-                            embed3.set_footer(
-                                text=f"Requested by {message.author.name}")
-                            await message.channel.send(embed=embed3)
-                            return
+                            try:
+                                res = await jsondata.json()
+                            except:
+                                embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
+                                                       description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
+                                embed3.set_author(name=f"{self.client.user.name}",
+                                                  icon_url=f"{self.client.user.avatar_url}")
+                                embed3.set_thumbnail(
+                                    url=get_embeds.ErrorEmbeds.THUMBNAIL)
+                                embed3.add_field(
+                                    name=get_embeds.ErrorEmbeds.FIELD_NAME, value=other_embeds["HentaiOther"]["JSONerror"], inline=False)
+                                embed3.set_footer(
+                                    text=f"Requested by {message.author.name}")
+                                await message.channel.send(embed=embed3)
+                                return
 
-                em = discord.Embed(color=get_embeds.Common.COLOR)
-                em.set_author(name=f"{self.client.user.name}",
-                              icon_url=f"{self.client.user.avatar_url}")
-                em.set_image(url=res)
-                em.set_footer(text=f"Requested by {message.author.name}")
-                await message.channel.send(embed=em)
+                    em = discord.Embed(color=get_embeds.Common.COLOR)
+                    em.set_author(name=f"{self.client.user.name}",
+                                  icon_url=f"{self.client.user.avatar_url}")
+                    em.set_image(url=res)
+                    em.set_footer(text=f"Requested by {message.author.name}")
+                    await message.channel.send(embed=em)
 
 
 def setup(client: commands.Bot):

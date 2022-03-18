@@ -168,6 +168,7 @@ class General(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def help(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         bp = get_main.BotMainDB.MESSAGE_PREFIX

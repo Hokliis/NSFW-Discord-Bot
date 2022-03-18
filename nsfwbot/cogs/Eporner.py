@@ -18,6 +18,7 @@ class Eporner(commands.Cog):
         self.please_wait_emb.set_footer(text=get_embeds.PleaseWait.FOOTER)
 
     @commands.command()
+    @commands.is_nsfw()
     async def pornlink(self, ctx, *, query):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -94,6 +95,7 @@ class Eporner(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def pornlinks(self, ctx, amount: int = None, *, query=None):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:

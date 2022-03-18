@@ -80,6 +80,7 @@ class Hentai(commands.Cog):
     #         await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def anal(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -138,6 +139,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def feet(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -197,6 +199,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def hentai(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -255,6 +258,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def boobs(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -313,6 +317,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def tits(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -371,6 +376,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command(aliases=["bji"])
+    @commands.is_nsfw()
     async def blowjobi(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -429,6 +435,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def lewd(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -515,6 +522,7 @@ class Hentai(commands.Cog):
     # NEW
 
     @commands.command()
+    @commands.is_nsfw()
     async def hentaii(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -573,6 +581,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def yuri(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -631,6 +640,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def erofeet(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -689,6 +699,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def erok(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -747,6 +758,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def hololewd(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -805,6 +817,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def lewdk(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -863,6 +876,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def keta(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -921,6 +935,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def eroyuri(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -979,6 +994,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def pussyi(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1037,6 +1053,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def pussy(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1095,6 +1112,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def cumi(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1153,6 +1171,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def cum(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1211,6 +1230,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def spank(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1269,6 +1289,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def lewdkemo(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1386,6 +1407,7 @@ class Hentai(commands.Cog):
     #         await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def avatar(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1444,6 +1466,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def soloi(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1502,6 +1525,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def solo(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1560,6 +1584,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def ero(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1618,6 +1643,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def eron(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1676,6 +1702,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def erokemo(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1734,6 +1761,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def trap(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1792,6 +1820,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command(aliases=["bj"])
+    @commands.is_nsfw()
     async def blowjob(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1850,6 +1879,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def holoero(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1908,6 +1938,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def gasm(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -1966,6 +1997,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def futanari(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
@@ -2024,6 +2056,7 @@ class Hentai(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
+    @commands.is_nsfw()
     async def pwank(self, ctx):
         loading_message = await ctx.send(embed=self.please_wait_emb)
         try:
