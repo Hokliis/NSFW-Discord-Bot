@@ -1,10 +1,15 @@
 {
-    "MESSAGE_PREFIX":".",
-    "BOT_CREATOR_NAME":"ZeaCeR#5641",
-    "BOT_VERSION":"1.0",
-    "DEV_AND_OWNERS":[584662127470575616],
+    "MESSAGE_PREFIX": "-",
+    "BOT_CREATOR_NAME": "ZeaCeR#5641",
+    "BOT_VERSION": "1.1",
+    "DEV_AND_OWNERS": [
+        584662127470575616
+    ],
     "BOT_ACTIVITY": "teamsds.net",
-
+    "WORKING_CHANNELS": [
+        954061118664503346,
+        945042682659610634
+    ],
     "OTHER": {
         "HentaiCog": {
             "lesbian": {
@@ -23,10 +28,10 @@
                 "APIlink": "https://nekos.life/api/v2/img/hentai"
             },
             "boobs": {
-                "APIlink":"https://nekos.life/api/v2/img/boobs"
+                "APIlink": "https://nekos.life/api/v2/img/boobs"
             },
             "tits": {
-                "APIlink":"https://nekos.life/api/v2/img/tits"
+                "APIlink": "https://nekos.life/api/v2/img/tits"
             },
             "blowjob": {
                 "APIlink": "https://nekos.life/api/v2/img/blowjob"
@@ -50,10 +55,10 @@
                 "APIlink": "https://nekos.life/api/v2/img/hololewd"
             },
             "lewdk": {
-                "APIlink":"https://nekos.life/api/v2/img/lewdk"
+                "APIlink": "https://nekos.life/api/v2/img/lewdk"
             },
             "keta": {
-                "APIlink":"https://nekos.life/api/v2/img/keta"
+                "APIlink": "https://nekos.life/api/v2/img/keta"
             },
             "eroyuri": {
                 "APIlink": "https://nekos.life/api/v2/img/eroyuri"
@@ -80,47 +85,44 @@
                 "APIlink": "https://nekos.life/api/v2/img/smallboobs"
             },
             "avatar": {
-                "APIlink":"https://nekos.life/api/v2/img/nsfw_avatar"
+                "APIlink": "https://nekos.life/api/v2/img/nsfw_avatar"
             },
             "solo": {
-                "APIlink":"https://nekos.life/api/v2/img/solog"
+                "APIlink": "https://nekos.life/api/v2/img/solog"
             },
             "soloi": {
-                "APIlink":"https://nekos.life/api/v2/img/solo"
+                "APIlink": "https://nekos.life/api/v2/img/solo"
             },
             "ero": {
-                "APIlink":"https://nekos.life/api/v2/img/ero"
+                "APIlink": "https://nekos.life/api/v2/img/ero"
             },
             "eron": {
-                "APIlink":"https://nekos.life/api/v2/img/ero"
+                "APIlink": "https://nekos.life/api/v2/img/ero"
             },
             "erokemo": {
-                "APIlink":"https://nekos.life/api/v2/img/ero"
+                "APIlink": "https://nekos.life/api/v2/img/ero"
             },
             "trap": {
-                "APIlink":"https://nekos.life/api/v2/img/trap"
+                "APIlink": "https://nekos.life/api/v2/img/trap"
             },
             "holoero": {
-                "APIlink":"https://nekos.life/api/v2/img/holoero"
+                "APIlink": "https://nekos.life/api/v2/img/holoero"
             },
             "gasm": {
-                "APIlink":"https://nekos.life/api/v2/img/gasm"
+                "APIlink": "https://nekos.life/api/v2/img/gasm"
             },
             "futanari": {
-                "APIlink":"https://nekos.life/api/v2/img/futanari"
+                "APIlink": "https://nekos.life/api/v2/img/futanari"
             },
             "pwank": {
-                "APIlink":"https://nekos.life/api/v2/img/pwankg"
+                "APIlink": "https://nekos.life/api/v2/img/pwankg"
             }
-            
         },
-
         "HentaiNew": {
             "gangbang2": "/hmtai/v1/gangband",
             "manga": "/hmtai/v1/manga",
             "nsfwNeko": "/hmtai/v1/nsfwNeko",
             "sfwNeko": "/hmtai/v1/sfwNeko",
-
             "ass": "/hmtai/v2_4/ass",
             "bdsm": "/hmtai/v2_4/bdsm",
             "cuckold": "/hmtai/v2_4/cuckold",
@@ -148,7 +150,6 @@
             "incest": "/hmtai/v2_4/incest",
             "elves": "/hmtai/v2_4/elves",
             "public": "/hmtai/v2_4/public"
-
         }
     }
 }

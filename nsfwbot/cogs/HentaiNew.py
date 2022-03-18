@@ -29,13 +29,13 @@ class Hentai(commands.Cog):
             return
 
         msg = str(message.content)
-        if msg.startswith(f'{self.bp}'):
+        if message.channel.id in get_main.BotMainDB.WORKING_CHANNELS:
+            if msg.startswith(f'{self.bp}'):
 
-            procMsg = msg.split(" ")[0][1:]  # message to be processed
+                procMsg = msg.split(" ")[0][1:]  # message to be processed
 
-            # Checking if the command exists in some other cog
-            allCommands = [str(c.name) for c in self.client.commands]
-            if message.channel.is_nsfw():
+                # Checking if the command exists in some other cog
+                allCommands = [str(c.name) for c in self.client.commands]
                 if procMsg not in allCommands:
                     urlFirst = "https://api.l0calserve4.ml"
                     urlLast = str(self.datadict[procMsg])
@@ -54,7 +54,6 @@ class Hentai(commands.Cog):
                                     text=f"Requested by {message.author.name}")
                                 await message.channel.send(embed=embed3)
                                 return
-
                             try:
                                 res = await jsondata.json()
                             except:
@@ -70,7 +69,6 @@ class Hentai(commands.Cog):
                                     text=f"Requested by {message.author.name}")
                                 await message.channel.send(embed=embed3)
                                 return
-
                     em = discord.Embed(color=get_embeds.Common.COLOR)
                     em.set_author(name=f"{self.client.user.name}",
                                   icon_url=f"{self.client.user.avatar_url}")

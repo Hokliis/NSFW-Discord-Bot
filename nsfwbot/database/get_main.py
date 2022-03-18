@@ -15,3 +15,4 @@ class BotMainDB:
     BOT_VERSION = embed["BOT_VERSION"]
     DEV_AND_OWNERS = embed["DEV_AND_OWNERS"]
     BOT_ACTIVITY = embed["BOT_ACTIVITY"]
+    WORKING_CHANNELS = embed["WORKING_CHANNELS"]

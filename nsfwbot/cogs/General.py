@@ -168,37 +168,37 @@ class General(commands.Cog):
             await ctx.send(embed=embed3)
 
     @commands.command()
-    @commands.is_nsfw()
     async def help(self, ctx):
-        loading_message = await ctx.send(embed=self.please_wait_emb)
-        bp = get_main.BotMainDB.MESSAGE_PREFIX
+        if ctx.channel.id in get_main.BotMainDB.WORKING_CHANNELS:
+            loading_message = await ctx.send(embed=self.please_wait_emb)
+            bp = get_main.BotMainDB.MESSAGE_PREFIX
 
-        try:
-            embed3 = discord.Embed(
-                title=other_embeds["help"]["title"], color=get_embeds.Help.COLOR)
-            embed3.set_author(
-                name=f"{self.client.user.name}", icon_url=f"{self.client.user.avatar_url}")
-            embed3.set_thumbnail(
-                url=get_embeds.Help.THUMBNAIL)
+            try:
+                embed3 = discord.Embed(
+                    title=other_embeds["help"]["title"], color=get_embeds.Help.COLOR)
+                embed3.set_author(
+                    name=f"{self.client.user.name}", icon_url=f"{self.client.user.avatar_url}")
+                embed3.set_thumbnail(
+                    url=get_embeds.Help.THUMBNAIL)
 
-            for k, v in other_embeds["help"]["fields"].items():
+                for k, v in other_embeds["help"]["fields"].items():
+                    embed3.add_field(
+                        name=str(k), value=str(v).format(prefix=bp), inline=False)
+
+                embed3.set_footer(text=f"Requested by {ctx.author.name}")
+                await loading_message.delete()
+                await ctx.send(embed=embed3)
+
+            except Exception as e:
+                embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
+                                       description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
+                embed3.set_author(name=f"{self.client.user.name}",
+                                  icon_url=f"{self.client.user.avatar_url}")
+                embed3.set_thumbnail(url=get_embeds.ErrorEmbeds.THUMBNAIL)
                 embed3.add_field(
-                    name=str(k), value=str(v).format(prefix=bp), inline=False)
-
-            embed3.set_footer(text=f"Requested by {ctx.author.name}")
-            await loading_message.delete()
-            await ctx.send(embed=embed3)
-
-        except Exception as e:
-            embed3 = discord.Embed(title=get_embeds.ErrorEmbeds.TITLE,
-                                   description=get_embeds.ErrorEmbeds.DESCRIPTION, color=get_embeds.ErrorEmbeds.COLOR)
-            embed3.set_author(name=f"{self.client.user.name}",
-                              icon_url=f"{self.client.user.avatar_url}")
-            embed3.set_thumbnail(url=get_embeds.ErrorEmbeds.THUMBNAIL)
-            embed3.add_field(
-                name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"{e}", inline=False)
-            embed3.set_footer(text=f"Requested by {ctx.author.name}")
-            await ctx.send(embed=embed3)
+                    name=get_embeds.ErrorEmbeds.FIELD_NAME, value=f"{e}", inline=False)
+                embed3.set_footer(text=f"Requested by {ctx.author.name}")
+                await ctx.send(embed=embed3)
 
 
 def setup(client: commands.Bot):
