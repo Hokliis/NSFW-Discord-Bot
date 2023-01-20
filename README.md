@@ -1,2 +1,85 @@
 # NSFW-Discord-Bot
-a perfect nsfw discord bot
+
+A NSFW Discord Bot that uses many Popular Public APIs
+
+## Available Commands:
+
+- `-anal` - The second hole and so ... lush
+- `-feet` - So you like smelly feet huh?
+- `-hentai` - Mmmm, anata wa hentai desu
+- `-hentaii` - Mmmm, anata wa hentai desu(Image)
+- `-boobs` - Very big, and so..soft, yeah, soft..very..very..soft :>
+- `-tits` - I know you like anime tits~ uwu
+- `-blowjob | -bj` - Basically an image of a girl sucking on a sharp blade!
+- `-blowjobi | -bji` - Basically an image of a girl sucking on a sharp blade!(Image)
+- `-lewd` -You are gonna love this!
+- `-yuri` - What about cute Les?~
+- `-erofeet` - Wow, I won't even question your fetishes.
+- `-erok` - Oh, I so lit, it's best of the best, like a religion <3
+- `-hololewd` - Holo it's you?
+- `-lewdk` - Common lewd? I don't know
+- `-keta` - Wet clothes? I like this =^=
+- `-eroyuri` - Mmmm, some hot erotital girls
+- `-anal` - The second hole and so ... lush
+- `-feet` - So you like smelly feet huh?
+- `-hentai` - Mmmm, anata wa hentai desu
+- `-hentaii` - Mmmm, anata wa hentai desu(Image)
+- `-boobs` - Very big, and so..soft, yeah, soft..very..very..soft :>
+- `-tits` - I know you like anime tits~ uwu
+- `-blowjob | -bj` - Basically an image of a girl sucking on a sharp blade!
+- `-blowjobi | -bji` - Basically an image of a girl sucking on a sharp blade!(Image)
+- `-lewd` -You are gonna love this!
+- `-yuri` - What about cute Les?~
+- `-erofeet` - Wow, I won't even question your fetishes.
+- `-erok` - Oh, I so lit, it's best of the best, like a religion <3
+- `-hololewd` - Holo it's you?
+- `-lewdk` - Common lewd? I don't know
+- `-keta` - Wet clothes? I like this =^=
+- `-eroyuri` - Mmmm, some hot erotital girls
+- `-pussy` - The genitals of a female, or a cat, you give the meaning.
+- `-pussyi` - The genitals of a female, or a cat, you give the meaning.(Image)
+- `-cum` - Basically sticky white stuff that is usually miked from sharpies
+- `-cumi` - Basically sticky white stuff that is usually miked from sharpies(Images)
+- `-spank` - Oh... it si beautiful
+- `-lewdkemo` - Common lewd? I don't know
+- `-avatar` - Hentai avatar? I set it in one Hub site :)
+- `-solo` - You like lewd solo?~
+- `-soloi` - You like lewd solo?~(Image)
+- `-ero` - Mmm, NIIIIIICEEEE, erotic Girls
+- `-eron` - Erotic neko girls ~<3
+- `-erokemo` - Basically an animated image, so yes :3
+- `-trap` - It's a trap! It's a trap! It's a trap!
+- `-holoero` - Why ero? Why not hentai?
+- `-gasm` - Oh... Senpai! Cum for me!
+- `-funtari`
+- `-pwank` - Girl's masturbation.. ok..."
+- `-gangbang` - 5 on 1? Uh..
+- `-gangbang2` - 5 on 1? Uh..
+- `-manga` - Sends a random doujin page image
+- `-ass` - I know you like anime ass~ uwu
+- `-bdsm` - If you don't know what it is, search it up
+- `-cuckold` - Wow, I won't even question your fetishes.
+- `-femdom` - Female Domination?
+- `-foot` - So you like smelly feet huh?
+- `-ahegao` - So happy woman faces :))
+- `-glasses` - Girls that wear glasses, uwu~
+- `-hentai2` - Sends a random vanilla hentai image.
+- `-uniform` - School Uniforms~
+- `-catgirl` - Cat girls
+- `-nmwallp` - NSFW Wallpaper with Anime on Mobile
+- `-mwallp` - SFW Wallpaper with Anime on Mobile
+- `-tentacles` - I'm sorry but, why do you like it? Uh..
+- `-thighs` - Oh, i so like it, it's best of the best, like a religion <3
+- `-panties` - I mean... just why? You like underwear?
+- `-orgy` - Group Lewd Acts
+- `-masturbation` - You like lewd solo
+- `-jahy` - So hot Jahy :3
+- `-wallp` - Wallpaper with Anime
+- `-zettai` - That one part of the flesh being squeeze in thigh-highs~<3
+- `-crampie` - So hot, sticky, and inside uwu
+- `-boobjob` - So soft, round ... gentle ... damn we love it
+- `-incest` - I know, you like it. Brothet and sister <3 And..mo...omg
+- `-elves` - So, it's not Elvis Presley, but i know, you like it :)
+- `-public` - Some people like do it on a public..uh~"
+- `-pornlink [query='hardcore']` - Search for a porn video
+- `-pornlinks <amount> <query>` - Search for many porn videos
